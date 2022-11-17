@@ -1,3 +1,4 @@
+import "./GreetingsComponent.css"
 // <KomponentenName> + "Props"
 type GreetingsComponenProps = {
     nameToGreet: string
@@ -13,6 +14,9 @@ export default function GreetingsComponent(props: GreetingsComponenProps) {
 
         // Wen wir {} (geschweiifte Klammern in return verwenden,
         // können wir JS ausfühen
-        <h3> Hallo ... {props.nameToGreet} </h3>
+        <div className={"Greeting-Box"}>
+            <h3> Hallo ... {props.nameToGreet} </h3>
+        </div>
+
     );
 }

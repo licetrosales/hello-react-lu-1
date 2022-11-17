@@ -1,5 +1,6 @@
 //Komponentname + "Props"
 import GreetingsComponent from "./GreetingsComponent";
+import "./PeopleGallery.css"
 
 type PeopleGalleryProps = {
     nameList: string[]
@@ -14,8 +15,8 @@ export default function PeopleGallery(props: PeopleGalleryProps) {
     );
     // Wir brauchen auf jeden Fall ein "HTML" -ish Elternelement
     return (
-        <>
+        <div className={"PeopleGallery"}>
             {peopleComponents}
-        </>
+        </div>
     );
 }
