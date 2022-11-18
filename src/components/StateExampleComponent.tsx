@@ -1,6 +1,6 @@
 //Namengebung = Großgeschrieben, genau sowie der Dateiname
 //() = Können Parameter benutzen = In React nnent sich das Props
-import {useState} from "react";
+import {ChangeEvent, ChangeEventHandler, useState} from "react";
 
 export default function StateExampleComponent(){
 
@@ -18,7 +18,7 @@ export default function StateExampleComponent(){
 
     const [croissantCounter, setCroissantCounter]= useState(0);
 
-
+    const[seacrchText, setSearchText] = useState("");
 
     function eatCroissant(){
         console.log("Mmmm ein leckeres  😄 donut")
@@ -37,6 +37,12 @@ export default function StateExampleComponent(){
     //Runde Klammer MUSS in return Zeile sein, weil sonst
     //*unreachable code after return statatment
 
+    const saveSearchText= (event: ChangeEvent<HTMLInputElement>)=> {
+
+        console.log(event.target.value);
+         setSearchText(event.target.value);
+    }
+
     return (
     <div>
         So viele Donuts haber wir gegessen: {croissantCounter}
@@ -44,5 +50,9 @@ export default function StateExampleComponent(){
         <br/>
         <button onClick={eatCroissant}>🦁 essen</button>
         <button onClick={redudeCroissant}>🦁 reduzieren </button>
+        <br/>
+        <br/>
+        <p>{seacrchText}</p>
+        <input onChange={saveSearchText}/>
     </div>);
 }
