@@ -4,6 +4,7 @@ import '../App.css';
 import HelloComponent from "./HelloComponent";
 import GreetingsComponent from "./GreetingsComponent";
 import PeopleGallery from "./PeopleGallery";
+import StateExampleComponent from "./StateExampleComponent";
 
 //Komponente die "App" heißt
 
@@ -41,6 +42,8 @@ function App() {
             {myTeamComponents}
 
             <PeopleGallery nameList={myTeam}/>
+
+            <StateExampleComponent/>
         </div>
     );
 }

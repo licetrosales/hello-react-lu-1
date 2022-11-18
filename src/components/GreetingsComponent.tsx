@@ -1,4 +1,5 @@
 import "./GreetingsComponent.css"
+
 // <KomponentenName> + "Props"
 type GreetingsComponenProps = {
     nameToGreet: string
